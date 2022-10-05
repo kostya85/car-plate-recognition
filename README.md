@@ -7,6 +7,7 @@ pip install -r ./requirements.txt
 # yolov3
 wget -P model_data https://pjreddie.com/media/files/yolov3.weights
 
+
 ## В папке /custom_dataset находятся изображения для тренировки модели
 Выбран именно такой датасет, так как у него были готовы изображения и размеченные xml файлы меток
 
@@ -30,10 +31,16 @@ tf.keras.backend.clear_session()
 main()
 ```
 
-Tensorboard располагается по адресу http://localhost:6006/:
+## Оценка модели
+Tensorboard располагается по адресу http://localhost:6006/
 <p align="center">
-    <img width="100%" src="images/tensorboard.png" style="max-width:100%;"></a>
+    <img width="100%" src="images/tensorboard-1.png" style="max-width:100%;"></a>
 </p>
+Выше приведены графики всех потерь, используемых в процессе обучения, наиболее важным является validate_loss/total_val:
+<p align="center">
+    <img width="100%" src="images/tensorboard-2.png" style="max-width:100%;"></a>
+</p>
+Чем меньше значение validate_loss, тем лучше модель.
 
 ## Использование кастомной модели
 Далее натренированная модель используется для определения номерных рамок
