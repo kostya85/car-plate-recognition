@@ -6,7 +6,8 @@ pip install -r ./requirements.txt
 
 # yolov3
 wget -P model_data https://pjreddie.com/media/files/yolov3.weights
-
+custom weights: https://drive.google.com/file/d/10Fj94jEgMc8Xc-uimr9F4Egxg-W0d9kp/view?usp=sharing
+Кастомные веса надо положить в папку /checkpoints
 
 ## В папке /custom_dataset находятся изображения для тренировки модели
 Выбран именно такой датасет, так как у него были готовы изображения и размеченные xml файлы меток
@@ -40,7 +41,7 @@ Tensorboard располагается по адресу http://localhost:6006/
 <p align="center">
     <img width="100%" src="images/tensorboard-2.png" style="max-width:100%;"></a>
 </p>
-Чем меньше значение validate_loss, тем лучше модель.
+Чем меньше значение validate_loss, тем лучше модель. В нашем случае лучшее значение было равно 0.32
 
 ## Использование кастомной модели
 Далее натренированная модель используется для определения номерных рамок
