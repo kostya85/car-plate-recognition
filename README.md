@@ -17,7 +17,7 @@ wget -P model_data https://pjreddie.com/media/files/yolov3.weights
 
 `./yolov3/configs.py` конфиг настроен для тренировки модели.
 
-##Тренировка модели
+## Тренировка модели
 Тренировать можно через терминал
 ```
 python train.py
@@ -35,7 +35,7 @@ Tensorboard располагается по адресу http://localhost:6006/:
     <img width="100%" src="images/tensorboard.png" style="max-width:100%;"></a>
 </p>
 
-##Использование кастомной модели
+## Использование кастомной модели
 Далее натренированная модель используется для определения номерных рамок
 ```
 # Create a new model instance
