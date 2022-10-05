@@ -2,6 +2,7 @@
 Для начала склонируйте репозиторий и установите предтренировочные веса:
 ```
 pip install -r ./requirements.txt
+```
 
 # yolov3
 wget -P model_data https://pjreddie.com/media/files/yolov3.weights
