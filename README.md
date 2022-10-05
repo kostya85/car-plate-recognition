@@ -54,7 +54,7 @@ plt.imshow(image)
 ```
 
 <p align="center">
-    <img width="100%" src="images/plate-detection.png" style="max-width:100%;"></a>
+    <img width="100%" src="images/plate-detection.PNG" style="max-width:100%;"></a>
 </p>
 
 Для распознавания самих символов используется CNN
@@ -76,5 +76,5 @@ loaded_model.load_weights('checkpoints/my_checkpoint')
 ```
 
 <p align="center">
-    <img width="100%" src="images/plate-recognition.png" style="max-width:100%;"></a>
+    <img width="100%" src="images/plate-recognition.PNG" style="max-width:100%;"></a>
 </p>
