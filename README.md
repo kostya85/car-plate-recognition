@@ -9,6 +9,10 @@ wget -P model_data https://pjreddie.com/media/files/yolov3.weights
 custom weights: https://drive.google.com/file/d/10Fj94jEgMc8Xc-uimr9F4Egxg-W0d9kp/view?usp=sharing
 Кастомные веса надо положить в папку /checkpoints
 
+## Датасет
+https://github.com/RobertLucian/license-plate-dataset
+Распакован в /custom_dataset
+
 ## В папке /custom_dataset находятся изображения для тренировки модели
 Выбран именно такой датасет, так как у него были готовы изображения и размеченные xml файлы меток
 
