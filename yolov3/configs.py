@@ -1,14 +1,3 @@
-#================================================================
-#
-#   File name   : configs.py
-#   Author      : PyLessons
-#   Created date: 2020-08-18
-#   Website     : https://pylessons.com/
-#   GitHub      : https://github.com/pythonlessons/TensorFlow-2.x-YOLOv3
-#   Description : yolov3 configuration file
-#
-#================================================================
-
 # YOLO options
 YOLO_TYPE                   = "yolov3" # yolov4 or yolov3
 YOLO_FRAMEWORK              = "tf" # "tf" or "trt"
