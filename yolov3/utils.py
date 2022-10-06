@@ -187,12 +187,6 @@ def bboxes_iou(boxes1, boxes2):
 
 
 def nms(bboxes, iou_threshold, sigma=0.3, method='nms'):
-    """
-    :param bboxes: (xmin, ymin, xmax, ymax, score, class)
-
-    Note: soft-nms, https://arxiv.org/pdf/1704.04503.pdf
-          https://github.com/bharatsingh430/soft-nms
-    """
     classes_in_img = list(set(bboxes[:, 5]))
     best_bboxes = []
 
@@ -293,7 +287,6 @@ def detect_image(Yolo, image_path, output_path, input_size=416, show=False, CLAS
     bboxes = nms(bboxes, iou_threshold, method='nms')
 
     image = draw_bbox(original_image, bboxes, CLASSES=CLASSES, rectangle_colors=rectangle_colors)
-    # CreateXMLfile("XML_Detections", str(int(time.time())), original_image, bboxes, read_class_names(CLASSES))
 
     if output_path != '': cv2.imwrite(output_path, image)
     if show:
@@ -486,7 +479,6 @@ def detect_video(Yolo, video_path, output_path, input_size=416, show=False, CLAS
         fps2 = 1000 / (sum(times_2)/len(times_2)*1000)
         
         image = cv2.putText(image, "Time: {:.1f}FPS".format(fps), (0, 30), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0, 0, 255), 2)
-        # CreateXMLfile("XML_Detections", str(int(time.time())), original_image, bboxes, read_class_names(CLASSES))
         
         print("Time: {:.2f}ms, Detection FPS: {:.1f}, total FPS: {:.1f}".format(ms, fps, fps2))
         if output_path != '': out.write(image)

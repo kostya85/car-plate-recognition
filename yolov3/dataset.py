@@ -38,20 +38,7 @@ class Dataset(object):
             txt = f.read().splitlines()
             annotations = [line.strip() for line in txt if len(line.strip().split()[1:]) != 0]
         np.random.shuffle(annotations)
-
-        # for annotation in annotations:
-        #     image_extension = '.jpg'
-        #     extension_index = annotation.find(image_extension)
-        #     image_path = annotation[:extension_index+len(image_extension)]
-        #     line = annotation[extension_index+len(image_extension):].split()
-        #     if not os.path.exists(image_path):
-        #         raise KeyError("%s does not exist ... " %image_path)
-        #     if TRAIN_LOAD_IMAGES_TO_RAM:
-        #         image = cv2.imread(image_path)
-        #     else:
-        #         image = ''
-        #     final_annotations.append([image_path, line, image])
-        # return final_annotations
+        
         for annotation in annotations:
             # fully parse annotations
             line = annotation.split()

@@ -6,7 +6,6 @@ print(device_lib.list_local_devices())
 import shutil
 import numpy as np
 import tensorflow as tf
-#from tensorflow.keras.utils import plot_model
 from yolov3.dataset import Dataset
 from yolov3.yolov4 import Create_Yolo, compute_loss
 from yolov3.utils import load_yolo_weights
