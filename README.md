@@ -47,6 +47,11 @@ main()
 ```
 
 ## Оценка модели
+# AP and precision/recall per class
+97.698% = license-plate AP  
+# mAP of all classes
+mAP = 97.698%, 7.09 FPS
+# Tensorboard
 Tensorboard располагается по адресу http://localhost:6006/
 <p align="center">
     <img width="100%" src="images/tensorboard-1.png" style="max-width:100%;"></a>
