@@ -1,17 +1,20 @@
-import tensorflow as tf
 import cv2
-import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
+import numpy as np
+import tensorflow as tf
+
 %matplotlib inline  
 import tensorflow as tf
-from yolov3.yolov4 import Create_Yolo
-from yolov3.utils import load_yolo_weights, detect_image
-from yolov3.configs import *
-from keras.layers import Flatten, Dense, Conv2D, MaxPooling2D, Input, Dropout
+from keras.layers import Conv2D, Dense, Dropout, Flatten, Input, MaxPooling2D
 from keras.models import Model, Sequential
-from keras.preprocessing.image import ImageDataGenerator
 from keras.optimizers import Adam
+from keras.preprocessing.image import ImageDataGenerator
+
+from yolov3.configs import *
+from yolov3.utils import detect_image, load_yolo_weights
+from yolov3.yolov4 import Create_Yolo
+
 
 def find_contours(dimensions, img) :
     # Find all contours in the image
